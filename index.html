@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Графики</title>
+</head>
+<body>
+    <H1>График 1</H1>
+    <canvas id="graph" wight = "300px" hight = "400px"></canvas>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        var ctx = document.getElementById('graph').getContext('2d');
+        var chart = new Chart(ctx,{
+        type: 'line',
+        data:{
+        labels:['January','February','March', 'April', 'May', 'June', 'July'],
+        datasets:[{
+          label: 'График показателей',
+          data:[-25, -10, 0, 2, 13, 24, 11],
+          backgroundColor: ['pink'],
+          borderColor: [
+            '#8DFFF8',
+            '#9DFF8D',
+            '#F68DFF',
+            '#FFA98D',
+             '#FFF48D',
+    
+          ],
+          borderWidht: 4
+        }]
+      },
+      options: {}
+    });
+    </script>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
